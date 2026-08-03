@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Your shopping cart | SmartSpace</title>
+  <meta name="description" content="Review your SmartSpace cart: update quantities, remove items and see your subtotal, delivery and total before checkout.">
+  <meta name="author" content="SmartSpace">
+  <meta name="theme-color" content="#173f3a">
+
+  <!-- TODO: replace YOUR-USERNAME with your GitHub username once the site is published. -->
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/smartspace-store/pages/cart.html">
+
+  <meta property="og:title" content="Your shopping cart | SmartSpace">
+  <meta property="og:description" content="Review and update the items in your SmartSpace shopping cart.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/smartspace-store/pages/cart.html">
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/smartspace-store/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body data-page="cart" data-root="../">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SmartSpace home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>SmartSpace</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="cart-link" href="cart.html">Cart <span class="cart-count" aria-live="polite">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+
+    <section class="page-intro">
+      <p class="eyebrow">Your order</p>
+      <h1>Shopping cart</h1>
+      <p>Update quantities or remove items before checkout.</p>
+    </section>
+
+    <div class="cart-layout">
+
+      <!-- Cart lines, built by script.js from localStorage -->
+      <section aria-labelledby="cart-heading">
+        <h2 id="cart-heading" class="sr-only">Cart items</h2>
+
+        <noscript>
+          <p class="noscript-message">The shopping cart needs JavaScript to store and total your items. Please enable JavaScript to continue.</p>
+        </noscript>
+
+        <div id="cart-items"></div>
+
+        <div id="empty-cart" class="empty-state" hidden>
+          <h2>Your cart is empty</h2>
+          <p>Browse products designed to make small spaces work better.</p>
+          <a class="button" href="products.html">Start shopping</a>
+        </div>
+      </section>
+
+      <!-- Totals -->
+      <aside id="order-summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order summary</h2>
+
+        <div>
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">&pound;0.00</strong>
+        </div>
+        <div>
+          <span>Delivery</span>
+          <strong id="delivery-cost">&pound;0.00</strong>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="cart-total">&pound;0.00</strong>
+        </div>
+
+        <p class="summary-note">Free standard delivery on orders over &pound;150.</p>
+        <button id="checkout-button" class="button button-full" type="button">Proceed to checkout</button>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="../index.html">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>SmartSpace</span>
+        </a>
+        <p>Smart products selected for compact homes, rented flats and city living.</p>
+      </div>
+
+      <div>
+        <h2>Shop</h2>
+        <a href="products.html">All products</a>
+        <a href="products.html?category=Storage">Storage</a>
+        <a href="products.html?category=Kitchen">Kitchen</a>
+      </div>
+
+      <div>
+        <h2>Support</h2>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Shopping cart</a>
+      </div>
+    </div>
+
+    <p class="footer-bottom">&copy; <span id="year"></span> SmartSpace. Student front-end project.</p>
+  </footer>
+
+  <!-- Checkout panel. Focus is trapped inside it while it is open (script.js). -->
+  <div id="checkout-modal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <button id="close-checkout" class="dialog-close" type="button" aria-label="Close checkout">&times;</button>
+      <h2 id="checkout-title">Checkout details</h2>
+
+      <form id="checkout-form" novalidate>
+        <label for="checkout-name">Full name</label>
+        <input id="checkout-name" name="name" autocomplete="name" required minlength="2">
+
+        <label for="checkout-email">Email address</label>
+        <input id="checkout-email" name="email" type="email" autocomplete="email" required>
+
+        <label for="checkout-address">Delivery address</label>
+        <textarea id="checkout-address" name="address" rows="3" autocomplete="street-address" required minlength="10"></textarea>
+
+        <button class="button button-full" type="submit">Place demonstration order</button>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

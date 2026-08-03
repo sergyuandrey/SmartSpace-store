@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">A compact studio flat</title>
+  <desc id="hero-desc">Illustration of a small apartment with a window, wall shelf, sofa, floor lamp and plant</desc>
+  <rect width="900" height="700" fill="#eef5f1"/>
+
+  <!-- floor -->
+  <rect y="540" width="900" height="160" fill="#dbe8e1"/>
+
+  <!-- window -->
+  <rect x="96" y="96" width="252" height="252" rx="12" fill="#ffffff"/>
+  <rect x="96" y="96" width="252" height="252" rx="12" fill="none" stroke="#173f3a" stroke-width="12"/>
+  <path d="M222 96 V348 M96 222 H348" stroke="#173f3a" stroke-width="10"/>
+  <circle cx="300" cy="160" r="30" fill="#f0b85b" opacity=".7"/>
+
+  <!-- wall shelf with boxes -->
+  <rect x="452" y="216" width="330" height="16" rx="8" fill="#2f6f64"/>
+  <rect x="486" y="160" width="72" height="56" rx="8" fill="#2f6f64" opacity=".55"/>
+  <rect x="576" y="176" width="52" height="40" rx="6" fill="#f0b85b" opacity=".8"/>
+  <rect x="646" y="150" width="20" height="66" rx="4" fill="#2f6f64" opacity=".75"/>
+  <rect x="672" y="164" width="20" height="52" rx="4" fill="#2f6f64" opacity=".5"/>
+  <rect x="698" y="172" width="20" height="44" rx="4" fill="#2f6f64" opacity=".65"/>
+
+  <!-- sofa -->
+  <rect x="430" y="380" width="366" height="96" rx="24" fill="#2f6f64"/>
+  <rect x="452" y="336" width="322" height="70" rx="20" fill="#2f6f64" opacity=".75"/>
+  <rect x="490" y="352" width="110" height="48" rx="12" fill="#f0b85b" opacity=".8"/>
+  <rect x="446" y="476" width="22" height="46" rx="11" fill="#173f3a"/>
+  <rect x="758" y="476" width="22" height="46" rx="11" fill="#173f3a"/>
+
+  <!-- floor lamp -->
+  <path d="M300 372 L232 462 L368 462 Z" fill="#f0b85b"/>
+  <rect x="292" y="462" width="16" height="106" rx="8" fill="#173f3a"/>
+  <ellipse cx="300" cy="572" rx="62" ry="15" fill="#173f3a"/>
+
+  <!-- plant -->
+  <path d="M128 540 h84 l-13 92 h-58 Z" fill="#a8603f" opacity=".85"/>
+  <path d="M170 540 q-8 -70 -56 -92 q40 -6 56 62" fill="#2f6f64"/>
+  <path d="M170 540 q8 -84 62 -104 q-44 -2 -62 74" fill="#2f6f64" opacity=".8"/>
+  <path d="M170 540 q-2 -50 -2 -84" stroke="#173f3a" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/>
+</svg>
