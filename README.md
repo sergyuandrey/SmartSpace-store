@@ -106,19 +106,6 @@ readings are covered. Product photography stays in `media/`.
 - Canonical link, Open Graph and Twitter card tags.
 - Favicon and a 1200&times;630 social share image.
 
----
-
-## Before you submit
-
-1. Replace `YOUR-USERNAME` in the `canonical`, `og:url` and `og:image` tags on
-   all five pages with your real GitHub Pages address.
-2. Run a Lighthouse audit in Chrome DevTools on each page, then save the
-   before-and-after screenshots into `evidence/`. See `evidence/README.md`.
-3. Push the project to GitHub and enable GitHub Pages in the repository
-   settings so the site has a live URL.
-
----
-
 ## Images
 
 All twelve product photographs were cropped to a 4:3 frame, resized to
